@@ -1,0 +1,16 @@
+#=============== Assignment 6 ====================
+#Que 1
+select *from ORDERS where Odate='1990-10-03' OR Odate='1990-10-04';
+
+select *from ORDERS where Odate between '1990-10-03' And '1990-10-04';
+#Que 2
+
+select *from CUSTOMERS where (Snum=1001 OR Snum=1004);
+select 	* from customers where Snum in
+(select Snum from salespeople where sname in ('peel', 'Motika'));
+#Que 3
+select *from CUSTOMERS where Cname >='A' AND Cname<'H';
+#Que 4
+select *from CUSTOMERS where Cname like 'C%';
+#Que 5
+select *from ORDERS where Amt!=0 OR Amt!=NULL;

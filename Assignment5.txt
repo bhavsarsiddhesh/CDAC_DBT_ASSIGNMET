@@ -1,0 +1,20 @@
+#=============== Assignment 5 ====================
+#Que 1
+select Onum from ORDERS where Amt<1000;
+#Que 2
+
+select Sname,City from SALESPEOPLE WHERE Comm > 0.10;
+#Que 3 
+
+select *from CUSTOMERS where rating != 100;
+#Que 4
+Select * from Orders
+where (Amt < 1000 OR NOT (Odate = '1990-10-03' AND Cnum > 2003));
+
+#Que 5
+Select * from Orders where NOT ((odate = '1990-10-03' OR snum>1006) AND amt >= 1500);
+
+#Que 6
+Select snum, sname, city, comm From Salespeople where (comm > .12 OR comm <.14);
+
+select *from SALESPEOPLE;

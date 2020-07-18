@@ -1,0 +1,13 @@
+﻿#==================Assignment 2===================
+
+#Que 1
+ANS:- Customer number: cnum
+ 
+#Que 2 
+ANS:- Rating
+
+#Que 3
+ANS:- Row: tuple, record, entity,opportunity.
+      Column: attribute,method,field. 
+#Que 4 
+ANS:- It's Not possible to see the first 5 rows of a table because tuples don’t have orders.
