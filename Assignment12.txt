@@ -1,0 +1,22 @@
+============================================ ASSIGHNMENT 12 ==========================================
+                                         Using the UNION clause.
+======================================================================================================
+
+1).Write a query that selects all customers whose ratings are equal to or greater than 
+   ANY of Serres’.
+
+ANS-> select *from customers 
+where rating >= ANY (select Rating from customers where snum in(select Snum        from salespeople where Sname ='Serres'));
+2).Write a query using ANY or ALL that will find all salespeople who have no 
+   customers located in their city.
+ANS->  select Snum,Sname from salespeople 
+where (Snum,City) not in (select Snum,City from customers);
+
+3).Write a query that selects all orders for amounts greater than any for the 
+   customers in London.
+ANS->  select *from orders where Amt > ANY (select Amt from Orders Where Cnum in (select Cnum from        Customers where City='London'));
+
+
+4) Write the above query using MIN or MAX.
+ANS->  select *from orders where Amt > ANY (select max(Amt) from Orders Where Cnum in (select Cnum from        Customers where City='London'));
+
